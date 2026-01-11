@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Notice | Roadwerk</title>
+    <meta name="description" content="Legal notice and information for Roadwerk.">
+    <meta name="robots" content="noindex">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="noise">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-[var(--border)]">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="/" class="font-black tracking-tighter text-xl flex items-center">
+                    <span class="bg-white text-black px-1.5 py-0.5 rounded mr-1">Road</span>
+                    <span class="tracking-widest opacity-80 uppercase text-sm">werk</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                <a href="/#werk" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="/#lab" class="hover:text-white transition-colors">Lab // Philosophy</a>
+                <a href="/#contact" class="text-[var(--accent)] hover:opacity-80 transition-opacity underline underline-offset-4 decoration-2">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn md:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="/#werk">Portfolio</a>
+        <a href="/#lab">Lab // Philosophy</a>
+        <a href="/#contact">Contact</a>
+    </div>
+
+    <!-- Content -->
+    <main class="pt-32 pb-24 px-6">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-12">Legal Notice</h1>
+
+            <div class="space-y-8 text-[var(--text-dim)] leading-relaxed">
+                <section>
+                    <h2 class="text-white font-bold text-lg mb-4">Information according to § 5 TMG</h2>
+                    <p>
+                        [Name / Company]<br>
+                        [Street and number]<br>
+                        [Postal code and city]
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-white font-bold text-lg mb-4">Contact</h2>
+                    <p>
+                        Email: <a href="mailto:hello@roadwerk.io" class="text-[var(--accent)] hover:underline">hello@roadwerk.io</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="text-white font-bold text-lg mb-4">Responsible for Content</h2>
+                    <p>
+                        [Name]<br>
+                        [Address]
+                    </p>
+                </section>
+
+                <section class="pt-8 border-t border-[var(--border)]">
+                    <p class="text-sm opacity-60">
+                        TODO: Please add your complete legal information here.
+                    </p>
+                </section>
+            </div>
+
+            <div class="mt-16">
+                <a href="/" class="text-xs font-black uppercase tracking-widest text-[var(--accent)] hover:underline">&larr; Back to Homepage</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-[var(--border)]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6 font-mono text-[9px] text-[var(--text-dim)] uppercase tracking-widest">
+            <span>&copy; 2026 Roadwerk Lab // Ronald & Adam</span>
+            <div class="flex gap-8">
+                <a href="legal.html" class="text-white">Legal Notice</a>
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

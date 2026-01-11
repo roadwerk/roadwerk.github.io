@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadwerk | Digital Engineering Lab</title>
+    <meta name="description" content="Roadwerk is an independent software lab in Berlin. We build digital tools with precision and without compromise.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Roadwerk | Digital Engineering Lab">
+    <meta property="og:description" content="We build software that feels like real tools: Precise, durable, and without compromise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roadwerk.io">
+    <meta property="og:image" content="https://roadwerk.io/assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roadwerk | Digital Engineering Lab">
+    <meta name="twitter:description" content="We build software that feels like real tools: Precise, durable, and without compromise.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="noise">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-[var(--border)]">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="/" class="font-black tracking-tighter text-xl flex items-center">
+                    <span class="bg-white text-black px-1.5 py-0.5 rounded mr-1 uppercase">Road</span>
+                    <span class="tracking-widest opacity-80 uppercase">werk</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--text-dim)]">
+                <a href="#werk" class="hover:text-white transition-colors">Portfolio</a>
+                <a href="#lab" class="hover:text-white transition-colors">Lab // Philosophy</a>
+                <a href="#contact" class="text-[var(--accent)] hover:opacity-80 transition-opacity underline underline-offset-4 decoration-2">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn md:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#werk">Portfolio</a>
+        <a href="#lab">Lab // Philosophy</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative pt-40 pb-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="status-pulse"></span>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-[var(--text-dim)]">Lab Status: Active // Berlin</span>
+            </div>
+
+            <h1 class="hero-title text-6xl md:text-9xl font-extrabold tracking-tighter leading-[0.85] mb-12">
+                We Build <br/><span class="gradient-text tracking-tighter">Tools.</span>
+            </h1>
+
+            <div class="grid md:grid-cols-2 gap-12 items-end">
+                <p class="text-xl text-[var(--text-dim)] leading-relaxed font-medium">
+                    Roadwerk is a collaboration between Adam & Ronald. We build software that feels like real tools: Precise, durable, and without compromise.
+                </p>
+                <div class="flex gap-4 md:justify-end">
+                    <a href="#werk" class="px-6 py-3 bg-white text-black text-xs font-black uppercase tracking-widest rounded hover:bg-[var(--accent)] transition-colors">Portfolio</a>
+                    <a href="#lab" class="px-6 py-3 border border-white/20 text-xs font-black uppercase tracking-widest rounded hover:bg-white/10 transition-colors">The Lab</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio -->
+    <section id="werk" class="py-32 px-6 border-t border-[var(--border)] bg-[#080808]">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-xs font-bold uppercase tracking-[0.5em] text-[var(--text-dim)] mb-4">Current Work</h2>
+                <div class="h-px w-20 bg-[var(--accent)]"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Tool 1: Stellwerk -->
+                <div class="card-hover bg-[var(--card)] border border-[var(--border)] p-10 rounded-lg flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="flex justify-between items-start mb-12">
+                            <span class="text-[var(--accent)] font-mono text-xs uppercase tracking-widest">01 // Stellwerk</span>
+                            <span class="text-[var(--text-dim)] font-mono text-[9px] uppercase">Conditional Calculation Engine</span>
+                        </div>
+                        <h3 class="text-4xl font-black tracking-tighter mb-6">Business Logic,<br/>Visible.</h3>
+                        <p class="text-[var(--text-dim)] leading-relaxed max-w-sm">
+                            A calculation engine that makes business logic visible, testable, and executable. Design on a visual canvas, deploy via REST API. Sub-100ms response times.
+                        </p>
+                    </div>
+                    <div class="mt-12 flex items-center justify-between border-t border-[var(--border)] pt-6">
+                        <div class="flex gap-4 font-mono text-[9px] text-[var(--text-dim)] uppercase tracking-widest">
+                            <span>Ruby/Rails</span>
+                            <span>Hotwire</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <a href="https://stellwerk.io" target="_blank" rel="noopener" class="text-xs font-black uppercase tracking-widest border-b-2 border-transparent hover:border-[var(--accent)] pb-1 transition-all">VISIT</a>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Volt -->
+                <div class="card-hover bg-[var(--card)] border border-[var(--border)] p-10 rounded-lg flex flex-col justify-between min-h-[400px]">
+                    <div>
+                        <div class="flex justify-between items-start mb-12">
+                            <span class="text-[var(--text-dim)] font-mono text-xs uppercase tracking-widest opacity-60">02 // Hurli</span>
+                            <span class="text-[var(--text-dim)] font-mono text-[9px] uppercase opacity-60">UI for hurl</span>
+                        </div>
+                        <h3 class="text-4xl font-black tracking-tighter mb-6 opacity-40">Coming <br/>Soon.</h3>
+                        <p class="text-[var(--text-dim)] leading-relaxed max-w-sm opacity-60">
+                            Organise and run your HTTP requests using <span class="ring ring-1 ring-gray-200 bg-gray-700 text-gray-200 rounded px-1 mx-1">hurl</span> files and <span class="ring ring-1 ring-gray-200 bg-gray-700 text-gray-200 rounded px-1 mx-1">yaml</span> configurations. 
+                        </p>
+                    </div>
+                    <div class="mt-12">
+                        <div class="h-px bg-[var(--border)] w-full mb-6"></div>
+                        <span class="text-[10px] font-mono text-[var(--text-dim)] uppercase tracking-widest opacity-40">Development Stage: Alpha</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Philosophy -->
+    <section id="lab" class="py-40 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.5em] text-[var(--accent)] mb-8">The Philosophy</h2>
+                    <h3 class="text-4xl font-extrabold tracking-tighter leading-none mb-6">Software as <br/>Craft.</h3>
+                </div>
+                <div class="md:col-span-8 space-y-10">
+                    <p class="text-2xl font-medium text-[var(--text-dim)] leading-tight">
+                        "We don't build anything we wouldn't use ourselves. Roadwerk is the sum of Ronald's systemic precision and Adam's drive for functional aesthetics."
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 pt-10 border-t border-[var(--border)]">
+                        <div>
+                            <h4 class="font-mono text-[10px] uppercase text-white mb-4 tracking-widest">Adam</h4>
+                            <p class="text-sm text-[var(--text-dim)]">Architect of interaction. Focus on user experience, interfaces, and the bridge between human and logic.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-mono text-[10px] uppercase text-white mb-4 tracking-widest">Ronald</h4>
+                            <p class="text-sm text-[var(--text-dim)]">Architect of stability. Focus on cloud infrastructure, data security, and scalable backend systems.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-24 px-6 border-t border-[var(--border)]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-16">
+                <div>
+                    <a href="/" class="font-black tracking-tighter flex items-center text-sm">
+                        <span class="bg-white text-black px-1.5 py-0.5 rounded mr-1 uppercase">Road</span>
+                        <span class="tracking-widest opacity-80 uppercase">werk</span>
+                    </a>
+                    <p class="text-[var(--text-dim)] text-sm max-w-xs leading-relaxed">
+                        Independent software lab for digital tools. <br/>Crafted in Berlin.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-20">
+                    <div class="space-y-6">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest text-[var(--accent)]">Work</h4>
+                        <ul class="space-y-3 text-sm font-bold uppercase tracking-tighter">
+                            <li><a href="https://stellwerk.io" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">Stellwerk</a></li>
+                            <li><a href="#werk" class="hover:text-[var(--accent)] transition-colors">Hurli (WIP)</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <h4 class="text-[10px] font-black uppercase tracking-widest text-[var(--accent)]">Connect</h4>
+                        <ul class="space-y-3 text-sm font-bold uppercase tracking-tighter">
+                            <li><a href="mailto:hello@roadwerk.io" class="hover:text-[var(--accent)] transition-colors">hello@roadwerk.io</a></li>
+                            <li><a href="https://github.com/roadwerk" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">GitHub</a></li>
+                            <li><a href="https://x.com/roadwerk" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">Twitter / X</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-32 flex flex-col md:flex-row justify-between gap-6 font-mono text-[9px] text-[var(--text-dim)] uppercase tracking-widest">
+                <span>&copy; 2026 Roadwerk Lab // Ronald & Adam</span>
+                <div class="flex gap-8">
+                    <a href="legal.html" class="hover:text-white transition-colors">Legal Notice</a>
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
