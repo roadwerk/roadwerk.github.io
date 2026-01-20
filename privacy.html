@@ -5,24 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Roadwerk</title>
     <meta name="robots" content="noindex">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-[var(--border)]">
-        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="font-bold text-lg">Roadwerk</a>
-            <div class="hidden md:flex items-center gap-8 text-sm text-[var(--text-dim)]">
-                <a href="/#work" class="hover:text-[var(--text-main)] transition-colors">Work</a>
-                <a href="/#about" class="hover:text-[var(--text-main)] transition-colors">About</a>
-                <a href="/#contact" class="text-[var(--accent)] font-medium hover:opacity-80 transition-opacity">Contact</a>
+    <nav class="fixed top-0 w-full z-50 nav-brutalist">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="logo flex items-center">
+                <span class="logo-block">Road</span>
+                <span class="tracking-widest opacity-80">werk</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="about.html" class="nav-link">About</a>
+                <a href="work.html" class="nav-link">Work</a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <div class="mobile-menu-btn md:hidden">
                 <span></span>
                 <span></span>
@@ -31,62 +45,66 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <a href="/#work">Work</a>
-        <a href="/#about">About</a>
-        <a href="/#contact">Contact</a>
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="mailto:hello@roadwerk.io">Contact</a>
     </div>
 
-    <!-- Content -->
-    <main class="pt-28 pb-20 px-6">
-        <div class="max-w-2xl mx-auto">
-            <a href="/" class="text-sm text-[var(--accent)] hover:underline mb-6 inline-block">&larr; Back</a>
-            <h1 class="text-3xl font-bold mb-10">Privacy Policy</h1>
+    <!-- Main Content -->
+    <main class="pt-24 pb-20 content-page">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8">
+            <a href="/" class="back-link">&larr; Back</a>
+            <h1>Privacy Policy</h1>
 
-            <div class="space-y-8 text-[var(--text-dim)]">
-                <section>
-                    <h2 class="text-[var(--text-main)] font-semibold mb-3">Overview</h2>
-                    <p>This page explains what happens to your personal data when you visit this website.</p>
-                </section>
+            <section>
+                <h2>Overview</h2>
+                <p>This page explains what happens to your personal data when you visit this website.</p>
+            </section>
 
-                <section>
-                    <h2 class="text-[var(--text-main)] font-semibold mb-3">Hosting</h2>
-                    <p>[Insert hosting provider information]</p>
-                </section>
+            <section>
+                <h2>Hosting</h2>
+                <p>[Insert hosting provider information]</p>
+            </section>
 
-                <section>
-                    <h2 class="text-[var(--text-main)] font-semibold mb-3">Data Controller</h2>
-                    <p>[Insert name and contact details]</p>
-                </section>
+            <section>
+                <h2>Data Controller</h2>
+                <p>[Insert name and contact details]</p>
+            </section>
 
-                <section>
-                    <h2 class="text-[var(--text-main)] font-semibold mb-3">Cookies</h2>
-                    <p>This website does not use cookies for analytics or advertising.</p>
-                </section>
+            <section>
+                <h2>Cookies</h2>
+                <p>This website does not use cookies for analytics or advertising.</p>
+            </section>
 
-                <section>
-                    <h2 class="text-[var(--text-main)] font-semibold mb-3">External Services</h2>
-                    <p>This site uses Google Fonts. When you access a page, your browser loads fonts directly from Google.</p>
-                </section>
+            <section>
+                <h2>External Services</h2>
+                <p>This site uses Google Fonts. When you access a page, your browser loads fonts directly from Google.</p>
+            </section>
 
-                <p class="text-sm pt-6 border-t border-[var(--border)] opacity-60">
+            <div class="mt-12 pt-8 border-t-3 border-[var(--border)]">
+                <p class="text-sm opacity-60">
                     Please complete your privacy policy per GDPR requirements.
                 </p>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-10 px-6 border-t border-[var(--border)]">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-4 text-sm text-[var(--text-dim)]">
-            <span>&copy; 2026 Roadwerk</span>
-            <div class="flex gap-6">
-                <a href="legal.html" class="hover:text-[var(--text-main)] transition-colors">Legal</a>
-                <a href="privacy.html" class="text-[var(--text-main)]">Privacy</a>
+    <!-- Footer Strip -->
+    <footer class="footer-strip">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-xs uppercase tracking-widest opacity-60">&copy; 2026 Roadwerk</span>
+            <div class="flex gap-8">
+                <a href="legal.html">Legal</a>
+                <a href="privacy.html" class="text-[var(--accent)]">Privacy</a>
+                <a href="https://github.com/roadwerk" target="_blank" rel="noopener">GitHub</a>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>

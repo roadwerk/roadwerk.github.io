@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Roadwerk</title>
+    <meta name="description" content="Meet Adam & Ronald, the team behind Roadwerk. We build digital tools with precision and without compromise.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About | Roadwerk">
+    <meta property="og:description" content="Meet the team behind Roadwerk. We build digital tools with precision.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roadwerk.io/about">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-brutalist">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="logo flex items-center">
+                <span class="logo-block">Road</span>
+                <span class="tracking-widest opacity-80">werk</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="work.html" class="nav-link">Work</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn md:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="mailto:hello@roadwerk.io">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-20">
+        <!-- Header Section -->
+        <section class="px-6 lg:px-8 mb-20">
+            <div class="max-w-7xl mx-auto">
+                <a href="/" class="back-link">&larr; Back</a>
+                <h1 class="text-display mb-8">About Us</h1>
+                <div class="max-w-3xl">
+                    <p class="text-xl md:text-2xl text-[var(--text-dim)] leading-relaxed">
+                        Roadwerk is a collaboration between Adam & Ronald. We create software that feels like real tools: precise, durable, and without compromise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="grid-line-h"></div>
+
+        <!-- Philosophy Section -->
+        <section class="px-6 lg:px-8 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-[var(--text-dim)] mb-6">Our Philosophy</h2>
+                        <p class="text-heading mb-6">
+                            We don't build anything we wouldn't use ourselves.
+                        </p>
+                        <p class="text-lg text-[var(--text-dim)] leading-relaxed">
+                            Quality over quantity, always. Every tool we create is built to last, designed to solve real problems, and crafted with attention to every detail.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-bold uppercase tracking-widest text-[var(--text-dim)] mb-6">Based In</h2>
+                        <p class="text-heading mb-6">
+                            Berlin, Germany
+                        </p>
+                        <p class="text-lg text-[var(--text-dim)] leading-relaxed">
+                            An independent software lab operating at the intersection of design and engineering. We work with select clients and build our own products.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="grid-line-h"></div>
+
+        <!-- Team Section -->
+        <section class="px-6 lg:px-8 py-20 section-dark">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-[var(--text-dim)] mb-12">The Team</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Adam -->
+                    <div class="card-brutalist dark">
+                        <h3 class="text-2xl font-black mb-4">Adam</h3>
+                        <p class="text-lg opacity-80 mb-6">
+                            Focus on user experience, interfaces, and the bridge between human and logic.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">UX</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Product</span>
+                        </div>
+                    </div>
+
+                    <!-- Ronald -->
+                    <div class="card-brutalist dark">
+                        <h3 class="text-2xl font-black mb-4">Ronald</h3>
+                        <p class="text-lg opacity-80 mb-6">
+                            Focus on cloud infrastructure, data security, and scalable backend systems.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag">Backend</span>
+                            <span class="tag">Infrastructure</span>
+                            <span class="tag">Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="px-6 lg:px-8 py-20">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-[var(--text-dim)] mb-8">Get In Touch</h2>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <div>
+                        <p class="text-display text-accent mb-4">
+                            hello@roadwerk.io
+                        </p>
+                        <p class="text-lg text-[var(--text-dim)]">
+                            We're always interested in hearing about new projects.
+                        </p>
+                    </div>
+                    <div class="flex gap-6">
+                        <a href="mailto:hello@roadwerk.io" class="btn-primary">Email Us</a>
+                        <a href="https://github.com/roadwerk" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Strip -->
+    <footer class="footer-strip">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="text-xs uppercase tracking-widest opacity-60">&copy; 2026 Roadwerk</span>
+            <div class="flex gap-8">
+                <a href="legal.html">Legal</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="https://github.com/roadwerk" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
