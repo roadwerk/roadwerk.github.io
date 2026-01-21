@@ -3,194 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roadwerk | Digital Engineering Lab</title>
-    <meta name="description" content="Roadwerk is an independent software lab in Berlin. We build digital tools with precision and without compromise.">
+    <title>ROADWERK</title>
+    <meta name="description" content="Roadwerk is an independent software lab in Berlin. We build digital tools with a focus on logic and tactility.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Roadwerk | Digital Engineering Lab">
-    <meta property="og:description" content="We build software that feels like real tools: Precise, durable, and without compromise.">
+    <meta property="og:title" content="ROADWERK">
+    <meta property="og:description" content="We build digital tools with a focus on logic and tactility. No fluff. Just code.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://roadwerk.io">
     <meta property="og:image" content="https://roadwerk.io/assets/og-image.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Roadwerk | Digital Engineering Lab">
-    <meta name="twitter:description" content="We build software that feels like real tools: Precise, durable, and without compromise.">
+    <meta name="twitter:title" content="ROADWERK">
+    <meta name="twitter:description" content="We build digital tools with a focus on logic and tactility. No fluff. Just code.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --bg: #F5F5F7;
+            --text: #111111;
+            --text-muted: #86868b;
+            --accent: #FF3300;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.4;
+            min-height: 100vh;
+        }
+
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        .img-grayscale {
+            filter: grayscale(100%);
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+        .img-grayscale:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: white;
+        }
+
+        .link-hover {
+            background-image: linear-gradient(var(--text), var(--text));
+            background-size: 0% 2px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            transition: background-size 0.3s ease;
+        }
+        .link-hover:hover {
+            background-size: 100% 2px;
+        }
+    </style>
 </head>
-<body>
+<body class="max-w-screen-xl mx-auto px-6 md:px-12 flex flex-col justify-between min-h-screen">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 nav-blur border-b border-[var(--border)]">
-        <div class="max-w-5xl mx-auto px-6 lg:px-0 h-16 flex items-center justify-between">
-            <a href="/" class="font-black tracking-tighter text-xl flex items-center">
-                <span class="bg-black text-white px-1.5 py-0.5 rounded mr-1 uppercase">Road</span>
-                <span class="tracking-widest opacity-80 uppercase">werk</span>
-            </a>
+    <script>
+        const themes = [
+            { bg: '#F5F5F7', accent: '#007AFF' },  // Light gray / Blue
+            { bg: '#FFF5F5', accent: '#FF3B30' },  // Soft rose / Red
+            { bg: '#F0FDF4', accent: '#34C759' },  // Soft mint / Green
+            { bg: '#F5F3FF', accent: '#5856D6' },  // Soft lavender / Purple
+            { bg: '#FFFBEB', accent: '#FF9500' },  // Soft cream / Orange
+            { bg: '#F0F9FF', accent: '#0EA5E9' },  // Soft sky / Cyan
+        ];
+        const theme = themes[Math.floor(Math.random() * themes.length)];
+        document.documentElement.style.setProperty('--bg', theme.bg);
+        document.documentElement.style.setProperty('--accent', theme.accent);
+    </script>
 
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-8 text-sm text-[var(--text-dim)]">
-                <a href="#work" class="hover:text-[var(--text-main)] transition-colors">Work</a>
-                <a href="#about" class="hover:text-[var(--text-main)] transition-colors">About</a>
-                <a href="#contact" class="text-[var(--accent)] font-medium hover:opacity-80 transition-opacity">Contact</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn md:hidden">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-    <!-- Hero -->
-    <header class="pt-32 pb-20 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <div class="flex items-center justify-center gap-2 mb-6">
-                <span class="status-pulse"></span>
-                <span class="text-sm text-[var(--text-dim)]">Based in Berlin</span>
-            </div>
-
-            <h1 class="hero-title text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8">
-                We build <span class="text-[var(--accent)]">tools</span> that work.
-            </h1>
-
-            <p class="text-xl text-[var(--text-dim)] mx-auto max-w-xl mb-10">
-                Roadwerk is a collaboration between Adam & Ronald. We create software that feels like real tools: precise, durable, and without compromise.
-            </p>
-
-            <div class="flex justify-center gap-4">
-                <a href="#work" class="px-5 py-2.5 bg-[var(--text-main)] text-white text-sm font-medium rounded-lg hover:bg-[var(--accent)] transition-colors">See our work</a>
-                <a href="#contact" class="px-5 py-2.5 border border-[var(--border)] text-sm font-medium rounded-lg hover:bg-[var(--bg-alt)] transition-colors">Get in touch</a>
-            </div>
+    <!-- HEADER -->
+    <header class="py-12 md:py-16 flex justify-between items-baseline border-b border-black/5">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter leading-none select-none">
+            roadwerk
+        </h1>
+        <div class="hidden md:block text-xs font-mono font-medium uppercase tracking-widest text-[var(--text-muted)]">
+            Berlin / Est. 2026
         </div>
     </header>
 
-    <!-- Work -->
-    <section id="work" class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-medium text-[var(--text-dim)] mb-10">Current projects</h2>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Stellwerk -->
-                <a href="https://stellwerk.io" target="_blank" rel="noopener" class="card-hover block bg-[var(--card)] border border-[var(--border)] p-8 rounded-xl">
-                    <div class="flex items-center gap-3 mb-4">
-                        <img src="assets/stellwerk-logo.svg" alt="Stellwerk" class="w-10 h-10">
-                        <div>
-                            <h3 class="font-semibold uppercase">Stellwerk</h3>
-                            <p class="text-sm text-[var(--text-dim)]">Calculation Engine</p>
-                        </div>
-                    </div>
-                    <p class="text-[var(--text-dim)] mb-6">
-                        A visual rule engine that makes business logic visible, testable, and executable via REST API.
-                    </p>
-                    <span class="text-sm font-medium text-[var(--accent)]">Visit site &rarr;</span>
-                </a>
-
-                <!-- Hurli -->
-                <div class="card-hover bg-[var(--card)] border border-[var(--border)] p-8 rounded-xl opacity-60">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg flex items-center justify-center text-[var(--text-dim)] font-bold text-sm">H</div>
-                        <div>
-                            <h3 class="font-semibold">Hurli</h3>
-                            <p class="text-sm text-[var(--text-dim)]">Coming soon</p>
-                        </div>
-                    </div>
-                    <p class="text-[var(--text-dim)]">
-                        Organize and run HTTP requests using <span class="code-tag">hurl</span> files and <span class="code-tag">yaml</span> configs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 px-6 bg-[var(--bg-alt)]">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-sm font-medium text-[var(--text-dim)] mb-10">About us</h2>
-
-            <p class="text-2xl md:text-3xl font-medium leading-snug mb-12 max-w-3xl">
-                We don't build anything we wouldn't use ourselves. Quality over quantity, always.
+    <!-- MANIFESTO -->
+    <main class="py-24 md:py-32">
+        <div class="max-w-4xl">
+            <p class="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight text-[var(--text)]">
+                We build digital tools with a focus on logic and tactility. <br>
+                <span class="text-[var(--text-muted)]">No fluff. Just code.</span>
             </p>
+        </div>
+    </main>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-semibold mb-2">Adam</h3>
-                    <p class="text-[var(--text-dim)]">Focus on user experience, interfaces, and the bridge between human and logic.</p>
+    <!-- TEAM -->
+    <section class="py-12 border-t border-black/5">
+        <div class="grid md:grid-cols-2 gap-16 md:gap-32">
+
+            <!-- Adam -->
+            <div class="flex flex-row items-start gap-8 group">
+                <div class="w-24 h-32 shrink-0 bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/300x400/e0e0e0/cccccc?text=+" alt="Adam Placeholder" class="w-full h-full object-cover img-grayscale mix-blend-multiply">
                 </div>
+
                 <div>
-                    <h3 class="font-semibold mb-2">Ronald</h3>
-                    <p class="text-[var(--text-dim)]">Focus on cloud infrastructure, data security, and scalable backend systems.</p>
+                    <h3 class="text-xl font-bold mb-1 group-hover:text-[var(--accent)] transition-colors">Adam</h3>
+                    <span class="block font-mono text-xs font-medium uppercase tracking-widest mb-4 text-[var(--text-muted)]">Software Engineer</span>
+                    <p class="text-base font-medium leading-relaxed max-w-sm">
+                        Translates complex logic into tangible interfaces. Focus on the tactility of software.
+                    </p>
                 </div>
             </div>
+
+            <!-- Ronald -->
+            <div class="flex flex-row items-start gap-8 group">
+                <div class="w-24 h-32 shrink-0 bg-gray-200 rounded-lg overflow-hidden">
+                    <img src="https://placehold.co/300x400/e0e0e0/cccccc?text=+" alt="Ronald Placeholder" class="w-full h-full object-cover img-grayscale mix-blend-multiply">
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-1 group-hover:text-[var(--accent)] transition-colors">Ronald</h3>
+                    <span class="block font-mono text-xs font-medium uppercase tracking-widest mb-4 text-[var(--text-muted)]">Softeware Engineer</span>
+                    <p class="text-base font-medium leading-relaxed max-w-sm">
+                        Builds the foundation. Thinks in scalable systems and performant architecture.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="py-16 px-6 border-t border-[var(--border)]">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-12 mb-16">
-                <div>
-                    <a href="/" class="font-black tracking-tighter flex items-center text-sm">
-                        <span class="bg-black text-white px-1.5 py-0.5 rounded mr-1 uppercase">Road</span>
-                        <span class="tracking-widest opacity-80 uppercase">werk</span>
-                    </a>
-                    <p class="text-sm text-[var(--text-dim)]">
-                        Independent software lab.<br/>Crafted in Berlin.
-                    </p>
-                </div>
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+        <div>
+            <span class="block font-mono text-xs font-medium uppercase tracking-widest text-[var(--text-muted)] mb-2">Contact</span>
+            <a href="mailto:hello@roadwerk.io" class="text-2xl md:text-3xl font-bold link-hover pb-1">hello@roadwerk.io</a>
+        </div>
 
-                <div>
-                    <h4 class="text-sm font-medium text-[var(--text-dim)] mb-4">Work</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="https://stellwerk.io" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">Stellwerk</a></li>
-                        <li><span class="text-[var(--text-dim)]">Hurli (soon)</span></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-sm font-medium text-[var(--text-dim)] mb-4">Connect</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="mailto:hello@roadwerk.io" class="hover:text-[var(--accent)] transition-colors">hello@roadwerk.io</a></li>
-                        <li><a href="https://github.com/roadwerk" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">GitHub</a></li>
-                        <li><a href="https://x.com/roadwerk" target="_blank" rel="noopener" class="hover:text-[var(--accent)] transition-colors">Twitter / X</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row justify-between gap-4 text-sm text-[var(--text-dim)]">
-                <span>&copy; 2026 Roadwerk</span>
-                <div class="flex gap-6">
-                    <a href="legal.html" class="hover:text-[var(--text-main)] transition-colors">Legal</a>
-                    <a href="privacy.html" class="hover:text-[var(--text-main)] transition-colors">Privacy</a>
-                </div>
-            </div>
+        <div class="text-right">
+             <p class="text-[10px] font-mono text-[var(--text-muted)] font-medium">
+                © 2026 Roadwerk. Built without unnecessary CSS.
+            </p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
 </html>
